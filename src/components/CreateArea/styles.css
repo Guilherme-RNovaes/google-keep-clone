@@ -1,0 +1,27 @@
+form {
+    position: relative;
+    width: 600px;
+    margin: 32px auto 50px auto;
+    background-color: var(--background-color);
+    padding: 7px;
+    border-radius: 7px;
+    box-shadow: 0 1px 7px var(--shadow);
+}
+
+form input {
+    padding: 4px 10px 24px 10px;
+    font-weight: 600;
+}
+
+form textarea {
+    padding: 4px 10px;  
+}
+
+form input, textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    resize: none;
+    font-family: sans-serif;
+}
