@@ -24,4 +24,27 @@ form input, textarea {
     font-size: 1rem;
     resize: none;
     font-family: sans-serif;
+    color: var(--mid-grey);
+}
+
+form button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 15px;
+    bottom: 3px;
+    border: none;
+    background-color: var(--background-color);
+    color: var(--mid-grey);
+    cursor: pointer;
+    font-weight: 600;
+    width: 80px;
+    height: 30px;
+    border-radius: 3.5px;
+    transition: all ease-in-out .2s;
+}
+
+form button:hover {
+    background-color: var(--light-grey);
 }
