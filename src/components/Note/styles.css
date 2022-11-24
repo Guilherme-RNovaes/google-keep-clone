@@ -20,3 +20,21 @@
     word-wrap: break-word;
 }
 
+.note button {
+    position: relative;
+    float: right;
+    border: none;
+    background-color: var(--background-color);
+    color: var(--mid-grey);
+    cursor: pointer;
+    font-weight: 600;
+    width: 80px;
+    height: 30px;
+    border-radius: 3.5px;
+    transition: all ease-in-out .2s;
+}
+
+.note button:hover {
+    background-color: var(--light-grey);
+}
+

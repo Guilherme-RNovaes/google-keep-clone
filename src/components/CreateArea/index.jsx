@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './styles.css'
 
 function CreateArea({ submitButton, onAdd }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const [note, setNote] = useState({
     title: "",
     content: "",
@@ -17,6 +19,10 @@ function CreateArea({ submitButton, onAdd }) {
     })
   }
 
+  function handleExpanded() {
+    setIsExpanded(true)
+  }
+
   function submitButton(event) {
     onAdd(note)
     setNote({
@@ -29,16 +35,20 @@ function CreateArea({ submitButton, onAdd }) {
   return (
     <div>
         <form>
-            <input 
-              value={note.title} 
-              type="text" 
-              placeholder='Título' 
-              name='title'
-              onChange={handleChange} 
-            />
+            {isExpanded && (
+              <input 
+                value={note.title} 
+                type="text" 
+                placeholder='Título' 
+                name='title'
+                onChange={handleChange} 
+                rows={isExpanded ? 3 : 1}
+              />
+            )}
             <p>
                 <textarea 
                   value={note.content} 
+                  onClick={handleExpanded}
                   name="content" 
                   placeholder='Criar uma nota...'
                   onChange={handleChange}

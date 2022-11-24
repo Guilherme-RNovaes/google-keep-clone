@@ -1,11 +1,11 @@
 import "./styles.css"
 
-function Note({ title, content }) {
+function Note({ title, content, onDelete, id }) {
   return (
     <div className='note'>
         <h1>{title}</h1>
         <p>{content}</p>
-        <button>Delete</button>
+        <button onClick={() => onDelete(id)} >Delete</button>
     </div>
   )
 }
